@@ -4,31 +4,69 @@
   box-sizing: border-box;
 }
 
+:root {
+  --opaque-clr: #00000040;
+  --base-clr: #ECFFB0;
+}
+
 body {
   height: 100svh;
   display: grid;
   place-items: center;
 }
 
-#container {
+button {
+  cursor: pointer;
+}
+
+#submit:hover {
+  border: 1px solid var(--opaque-clr);
+  background-color: var(--opaque-clr);
+}
+
+
+
+#container, #output, #display {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#display {
-  display: flex;
-  flex-direction: column;
+#container {
   gap: 5vmin;
 }
 
-#input {
+#output, #input {
+  background-color: #ECFFB0;
+}
+
+#output {
+  padding: 2.5vmin;
+  gap: 2.5vmin;
+  border: 1px solid black;
+}
+
+#display {
   color: black;
-  display: flex;
   gap: 2.5vmin;
 }
 
+#input {
+  padding: 1vmin;
+  display: flex;
+  align-items: center;
+  gap: 1vmin;
+  border: 1px solid black;
+}
+
+#input input {
+  padding: 4px;
+  font-size: 1rem;
+}
+
 #submit {
+  padding: 4px 8px;
   background: none;
-  border: none;
+  border: 1px solid currentColor;
+  border-radius: 4px;
 }
